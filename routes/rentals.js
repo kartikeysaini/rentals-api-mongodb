@@ -10,7 +10,7 @@ const router = express.Router();
 
 
 router.post('/', async (req,res)=>{
-    const error = validateRental(req.body);
+    const {error} = validateRental(req.body);
 
     if(error)
     return res.status(401).send('invalid data');
